@@ -40,7 +40,10 @@ fun SignUpScreen(navHostController: NavHostController) {
                 }
             )
             Spacer(modifier = Modifier.size(100.dp))
-            Text("Back To Login")
+            Text("Back To Login",
+            modifier = Modifier.clickable {
+                navHostController.navigate(Screen.Login.route)
+            })
         }
     }
 }

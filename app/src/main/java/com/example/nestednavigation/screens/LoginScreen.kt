@@ -45,7 +45,9 @@ fun LogInScreen(navHostController: NavHostController) {
             Spacer(modifier = Modifier.size(100.dp))
             Text("Go To Detail",
                 modifier = Modifier.clickable {
-                 navHostController.navigate(Screen.Detail.route)
+
+                    navHostController.popBackStack()
+                    navHostController.navigate(Screen.Detail.route)
                 /*navHostController.navigate(HOME_ROUTE){
                         popUpTo(HOME_ROUTE)
                     }*/

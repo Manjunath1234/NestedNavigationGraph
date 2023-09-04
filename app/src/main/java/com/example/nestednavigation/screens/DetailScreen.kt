@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.nestednavigation.HOME_ROUTE
 import com.example.nestednavigation.Screen
 
 
@@ -37,12 +38,12 @@ fun DetailScreen(navHostController: NavHostController) {
                 fontSize = MaterialTheme.typography.headlineMedium.fontSize,
                 fontWeight = FontWeight.Bold,
                 color = Color.Green,
-                modifier = Modifier.clickable {
-                    navHostController.navigate(Screen.Login.route)
-                }
+
             )
             Spacer(modifier = Modifier.size(100.dp))
-            Text(text = "Go Back To Home")
+            Text(text = "Go Back To Home", modifier = Modifier.clickable { 
+                navHostController.navigate(HOME_ROUTE)
+            })
         }
     }
 }

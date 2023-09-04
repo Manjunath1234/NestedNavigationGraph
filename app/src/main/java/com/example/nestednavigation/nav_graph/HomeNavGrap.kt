@@ -7,6 +7,7 @@ import androidx.navigation.navigation
 import com.example.nestednavigation.HOME_ROUTE
 
 import com.example.nestednavigation.Screen
+import com.example.nestednavigation.screens.DetailScreen
 import com.example.nestednavigation.screens.HomeScreen
 
 
@@ -17,6 +18,9 @@ fun NavGraphBuilder.homeNavGraph(navHostController: NavHostController) {
      ){
          composable(route = Screen.Home.route){
              HomeScreen(navHostController)
+         }
+         composable(route = Screen.Detail.route){
+             DetailScreen(navHostController)
          }
      }
 }
